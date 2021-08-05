@@ -1,9 +1,3 @@
 # Default ignored files
 /shelf/
 /workspace.xml
-*.iml
-/local.properties
-.idea
-.DS_Store
-/captures
-.externalNativeBuild
