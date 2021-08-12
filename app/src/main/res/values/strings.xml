@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SleepTracker</string>
+    <string name="sleep_data" >12:00 \n12:00 \npretty</string>
 </resources>
