@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:layout_marginBottom="16dp"
-        android:text="How was your sleep"
+        android:text="@string/rate_sleep"
         app:layout_constraintBottom_toTopOf="@+id/quality_zero_image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

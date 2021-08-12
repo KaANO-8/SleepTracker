@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter
 import com.kaano8.sleeptracker.DashboardActivity
 import com.kaano8.sleeptracker.R
 import com.kaano8.sleeptracker.databinding.SleepTrackerFragmentBinding
+import com.kaano8.sleeptracker.extensions.disable
+import com.kaano8.sleeptracker.extensions.enable
 
 class SleepTrackerFragment : Fragment() {
 
@@ -28,35 +30,24 @@ class SleepTrackerFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        list = resources.getStringArray(R.array.itemsList).toList()
+        list = resources.getStringArray(R.array.sleep_data).toList()
         arrayAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, list)
         _binding.list.adapter = arrayAdapter
 
         _binding.startButton.setOnClickListener {
-            _binding.clearButton.isEnabled = false
-            _binding.startButton.isEnabled = false
-            showLoader()
+            _binding.stopButton.enable()
+            _binding.startButton.disable()
         }
 
        _binding.stopButton.setOnClickListener {
-           hideLoader()
            (activity as DashboardActivity).supportFragmentManager.beginTransaction()
                .replace(R.id.container, SleepQualityFragment.newInstance())
                .commitNow()
        }
 
         _binding.clearButton.setOnClickListener {
-
+            //clear data to be implemented later
         }
-
-    }
-
-    private fun showLoader() {
-        _binding.loader.visibility = View.VISIBLE
-    }
-
-    private fun hideLoader() {
-        _binding.loader.visibility = View.GONE
 
     }
 
