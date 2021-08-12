@@ -12,6 +12,10 @@ import com.kaano8.sleeptracker.databinding.SleepTrackerFragmentBinding
 
 class SleepTrackerFragment : Fragment() {
 
+    private lateinit var arrayAdapter: ArrayAdapter<String>
+
+    private lateinit var list: List<String>
+
     private lateinit var _binding: SleepTrackerFragmentBinding
 
     override fun onCreateView(
@@ -24,16 +28,8 @@ class SleepTrackerFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val arrayAdapter: ArrayAdapter<*>
-        val list = arrayOf(
-            getString(R.string.sleep_data)
-        )
-
-        arrayAdapter = ArrayAdapter(
-            context as DashboardActivity,
-            android.R.layout.simple_list_item_1, list
-        )
+        list = resources.getStringArray(R.array.itemsList).toList()
+        arrayAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, list)
         _binding.list.adapter = arrayAdapter
 
         _binding.startButton.setOnClickListener {
