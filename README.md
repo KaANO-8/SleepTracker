@@ -15,13 +15,13 @@ Steps:
 
 ## Screenshots
 
-![Screenshot 1](screenshots/screen_1.jpg)
-![Screenshot 2](screenshots/screen_2.jpg)
-![Screenshot 3](screenshots/screen_3.jpg)
+![Screenshot 1](screenshots/screen_1.jpg =648x1395)
+![Screenshot 2](screenshots/screen_2.jpg =648x1395)
+![Screenshot 3](screenshots/screen_3.jpg =648x1395)
 
 ## Contributors
 
-- Aayushi Mathur ([@aayum](https://github.com/aayum)
-- Kushagra Jaiswal ([@kj280994](https://github.com/kj280994)
-- Rahul Kanojia ([@KaANO-8](https://github.com/KaANO-8)
+- Aayushi Mathur ([@aayum](https://github.com/aayum))
+- Kushagra Jaiswal ([@kj280994](https://github.com/kj280994))
+- Rahul Kanojia ([@KaANO-8](https://github.com/KaANO-8))
 
