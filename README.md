@@ -15,6 +15,7 @@ Steps:
 
 ## Screenshots
 
+!<img src="https://github.com/KaANO-8/SleepTracker/blob/project_starter/screenshots/screen_1.jpg" width="648" height="1395">
 ![Screenshot 1](screenshots/screen_1.jpg =648X1395)
 ![Screenshot 2](screenshots/screen_2.jpg =648x1395)
 ![Screenshot 3](screenshots/screen_3.jpg =648x1395)
