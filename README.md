@@ -21,7 +21,7 @@ Steps:
 
 ## Contributors
 
-- Aayushi Mathur (@aayum)
-- Kushagra Jaiswal (@kj280994)
-- Rahul Kanojia (@KaANO-8)
+- Aayushi Mathur ([@aayum](https://github.com/aayum)
+- Kushagra Jaiswal ([@kj280994](https://github.com/kj280994)
+- Rahul Kanojia ([@KaANO-8](https://github.com/KaANO-8)
 
