@@ -15,9 +15,9 @@ Steps:
 
 ## Screenshots
 
-!<img src="https://github.com/KaANO-8/SleepTracker/blob/project_starter/screenshots/screen_1.jpg" width="324" height="698">
-!<img src="https://github.com/KaANO-8/SleepTracker/blob/project_starter/screenshots/screen_2.jpg" width="324" height="698">
-!<img src="https://github.com/KaANO-8/SleepTracker/blob/project_starter/screenshots/screen_3.jpg" width="324" height="698">
+<img src="https://github.com/KaANO-8/SleepTracker/blob/project_starter/screenshots/screen_1.jpg" width="324" height="698">
+<img src="https://github.com/KaANO-8/SleepTracker/blob/project_starter/screenshots/screen_2.jpg" width="324" height="698">
+<img src="https://github.com/KaANO-8/SleepTracker/blob/project_starter/screenshots/screen_3.jpg" width="324" height="698">
 
 ## Contributors
 
