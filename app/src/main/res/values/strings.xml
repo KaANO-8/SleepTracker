@@ -1,13 +1,4 @@
 <resources>
     <string name="app_name">SleepTracker</string>
-    <string-array name="sleep_data">
-        <item>Sleep data 1</item>
-        <item>Sleep data 2</item>
-        <item>Sleep data 3</item>
-    </string-array>
-    <string name="rate_sleep">How was your sleep?</string>
-    <string name="start">Start</string>
-    <string name="stop">Stop</string>
-    <string name="clear">Clear</string>
 
 </resources>
