@@ -9,5 +9,6 @@
     <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="clear">Clear</string>
+    <string name="sleep_quality_title">Rate your sleep</string>
 
 </resources>
