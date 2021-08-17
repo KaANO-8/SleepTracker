@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">SleepTracker</string>
+    <string-array name="sleep_data">
+        <item>Sleep data 1</item>
+        <item>Sleep data 2</item>
+        <item>Sleep data 3</item>
+    </string-array>
+    <string name="rate_sleep">How was your sleep?</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="clear">Clear</string>
+    <string name="empty_list_message">No sleep data available. Press start to record sleep data.</string>
+    <string name="dialog_title">Clear data</string>
+    <string name="dialog_message">Are you sure you want to clear sleep data?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
 </resources>
