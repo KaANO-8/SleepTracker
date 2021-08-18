@@ -38,31 +38,34 @@ class SleepTrackerFragment : Fragment() {
         arrayAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1)
         _binding.list.adapter = arrayAdapter
 
-        // Initialise tracking state by checking key in shared preferences
-        viewModel.setTrackingState(
-            isTracking = requireContext().getSharedPreferences(
-                SHARED_PREFERENCES_FILE_NAME, Context.MODE_PRIVATE
-            ).contains(START_TIME_KEY)
-        )
+        with(viewModel) {
+            // Initialise tracking state by checking key in shared preferences
+            setTrackingState(
+                isTracking = requireContext().getSharedPreferences(
+                    SHARED_PREFERENCES_FILE_NAME, Context.MODE_PRIVATE
+                ).contains(START_TIME_KEY)
+            )
 
-        // Adding observers for live data
-        viewModel.isTracking.observe(viewLifecycleOwner) { isTracking ->
-            if (isTracking) setTrackingState()
-            else setNewState()
-        }
-
-        viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
-            with(_binding) {
-                loader.visibility = if (isLoading) View.VISIBLE else View.GONE
-                list.visibility = if (isLoading) View.GONE else View.VISIBLE
+            // Adding observers for live data
+            isTracking.observe(viewLifecycleOwner) { isTracking ->
+                if (isTracking) setTrackingState()
+                else setNewState()
             }
-        }
 
-        viewModel.sleepData.observe(viewLifecycleOwner) {
-            arrayAdapter.apply {
-                clear()
-                addAll(it)
-                notifyDataSetChanged()
+            isLoading.observe(viewLifecycleOwner) { isLoading ->
+                with(_binding) {
+                    loader.visibility = if (isLoading) View.VISIBLE else View.GONE
+                    if (isLoading)
+                        list.overscrollFooter
+                }
+            }
+
+            sleepData.observe(viewLifecycleOwner) {
+                arrayAdapter.apply {
+                    clear()
+                    addAll(it)
+                    notifyDataSetChanged()
+                }
             }
         }
 
@@ -83,6 +86,7 @@ class SleepTrackerFragment : Fragment() {
 
         // Mocking API call
         Handler(Looper.getMainLooper()).postDelayed({
+            // TODO: Move sleep data up
             viewModel.populateSleepData()
         }, 2000)
 

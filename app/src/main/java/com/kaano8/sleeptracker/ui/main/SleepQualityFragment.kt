@@ -69,6 +69,7 @@ class SleepQualityFragment : Fragment() {
                     qualityContainer.gone()
                     progressBar.visible()
                 } else {
+                    // TODO: Move to failure
                     qualityContainer.visible()
                     progressBar.gone()
                 }
